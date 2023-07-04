@@ -1,0 +1,50 @@
+/**
+ * Custom styles to immediately follow Tailwind’s `base` layer
+ *
+ * “Add things like base typography styles [or] opinionated global resets.”
+ *
+ * — from https://tailwindcss.com/docs/plugins#adding-base-styles
+ */
+
+/**
+ * This uses the background and foreground colors declared in the
+ * `theme.json` file and is applied both to the frontend and in the block
+ * editor.
+*/
+body {
+	@apply bg-background text-foreground font-sans;
+	background-color: #e5e5e5;
+}
+
+.yellow-btn {
+	padding: .7rem 1rem;
+	border-radius: 10px;
+	color: black;
+	background-color: #FDC435;
+	margin-top: 2rem;
+}
+
+.project {
+	margin-bottom: 3rem;
+}
+
+.projects .left {
+	flex-flow: row-reverse;
+}
+
+@media only screen and (max-width: 640px) {
+	.projects .left {
+		flex-direction: column;
+	}
+}
+
+.gform_title {
+	display: none;
+}
+
+.gform_button {
+	padding: .7rem 1rem;
+	border-radius: 10px;
+	color: black;
+	background-color: #FDC435;
+}
